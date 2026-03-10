@@ -85,7 +85,57 @@ Key settings in `wrangler.jsonc`:
 - **`compatibility_flags`**: includes `nodejs_compat`
 - **Observability**: enabled
 
+## Agents
+
+Guidance for Cloudflare Workers in this project:
+
+- STOP. Your knowledge of Cloudflare Workers APIs and limits may be outdated. Always retrieve current documentation before any Workers, KV, R2, D1, Durable Objects, Queues, Vectorize, AI, or Agents SDK task.
+
+### Docs
+
+- `https://developers.cloudflare.com/workers/`
+- MCP: `https://docs.mcp.cloudflare.com/mcp`
+
+For all limits and quotas, retrieve from the product's `/platform/limits/` page, for example `/workers/platform/limits`.
+
+### Commands
+
+| Command | Purpose |
+|---------|---------|
+| `npx wrangler dev` | Local development |
+| `npx wrangler deploy` | Deploy to Cloudflare |
+| `npx wrangler types` | Generate TypeScript types |
+
+Run `wrangler types` after changing bindings in `wrangler.jsonc`.
+
+### Node.js compatibility
+
+`https://developers.cloudflare.com/workers/runtime-apis/nodejs/`
+
+### Errors
+
+- **Error 1102** (CPU/Memory exceeded): Retrieve limits from `/workers/platform/limits/`
+- **All errors**: `https://developers.cloudflare.com/workers/observability/errors/`
+
+### Product docs
+
+Retrieve API references and limits from:
+`/kv/` · `/r2/` · `/d1/` · `/durable-objects/` · `/queues/` · `/vectorize/` · `/workers-ai/` · `/agents/`
+
 ## License
 
-MIT. See `LICENSE`.
+MIT License
+
+Copyright (c) 2026
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
 
